@@ -39,11 +39,11 @@
 
 #### 3-1) 삭제할 노드가 leaf 노드인 경우
 - 제거할 노드가 leaf 노드일 경우는 간단하게 제거만 하면 된다.
-<p align="center"><img src="./images/remove_leaf_node.gif" width="600"></p>
+<p align="center"><img src="./images/remove_leaf_node.gif" width="300"></p>
 
 #### 3-2) 삭제할 노드가 한 개의 자식 노드를 가지는 경우
 - 제거할 노드가 하나의 자식 노드를 가진 경우는 아래와 같이 참조값을 변경하기만 하면 된다.
-<p align="center"><img src="./images/remove_single_child.gif" width="600"></p>
+<p align="center"><img src="./images/remove_single_child.gif" width="300"></p>
 
 #### 3-3) 삭제할 노드가 두 개의 자식 노드를 가지는 경우
 - 제거할 노드가 2개의 자식 노드를 가진 경우 __왼쪽 하위 트리에서 가장 큰 항목__ 또는 __오른쪽 하위 트리에서 가장 작은 항목__ 을 찾아 서로의 위치를 바꾸고, 노드를 제거한다
