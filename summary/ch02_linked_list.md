@@ -80,6 +80,8 @@ public Node<T> getMiddleNode() {
 - 모든 노드를 하나씩 방문한 뒤 역순으로 Linked List를 구성하는 방법이 있는데 O(N) 공간복잡도를 가지기 때문에 적절한 해결책이 될 수 없다.
 - 포인터를 사용한다.
 
+<p align="center"><img src="./images/linked-list-reverse.gif" width="600"></p>
+
 ```java
 @Override
 public void reverse() {
@@ -100,6 +102,8 @@ public void reverse() {
 ```
 
 #### 1번
+<p align="center"><img src="./images/linked-list-reverse1.png" width="600"></p>
+
 - 아래의 코드와 같이 현재 prevNode, nextNode는 null을 가리키고, currentNode는 Liked List의 head인 root를 가리키고 있다.
 ```java
 Node<T> currentNode = this.root;
@@ -108,18 +112,26 @@ Node<T> nextNode = null;
 ```
 
 #### 2번
+<p align="center"><img src="./images/linked-list-reverse2.png" width="600"></p>
+
 - while 반복문에서 첫 번째로 현재 노드(currentNode)의 다음 노드를 nextNode에 세팅한다.
 ```java
 nextNode = currentNode.getNextNode(); // 현재 노드의 nextNode 세팅
 ```
 
 #### 3번
-- 현재 노드(currentNode)의 다음노드(nextNode)를 이전노드(prevNode)로 변경해준다. 이렇게 하면 역순으로 변경이 된다.
+<p align="center"><img src="./images/linked-list-reverse3.png" width="600"></p>
+
+- 현재 노드(currentNode)의 다음 노드(nextNode)를 이전 노드(prevNode)로 변경해준다. 이렇게 하면 역순으로 변경이 된다.
 ```java
 currentNode.setNextNode(prevNode);    // 현재 노드의 다음노드를 이전 노드로 변경 (역순으로 변경됨)
 ```
 
 #### 4번
+<p align="center"><img src="./images/linked-list-reverse4.png" width="600"></p>
+
 - 이제 포인터를 뒤로 한 칸씩 이동시키기 위해 현재 노드(currentNode)를 이전 노드(prev)로 세팅한다.
 
-- 그리고 나서 다음노드(nextNode)를 현재 노드(currentNode)로 세팅한다.
+<p align="center"><img src="./images/linked-list-reverse5.png" width="600"></p>
+
+- 그리고 나서 다음 노드(nextNode)를 현재 노드(currentNode)로 세팅한다.
